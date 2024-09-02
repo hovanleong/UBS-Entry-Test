@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+}
+
+application {
+    mainClassName = 'Main'  // Adjust to fully qualified name if in a package
+}
+
+// Configure source directory for the 'app' project
+sourceSets {
+    main {
+        java {
+            srcDirs = ['app/src']
+        }
+    }
+}
+
